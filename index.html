@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>carusworks SMOS — 소상공인 턴키 비즈니스 OS</title>
+<meta name="description" content="소상공인을 위한 1인 미디어 솔루션 키트. 태블릿 하나에 통째로 — 설치·설정 다 끝낸 턴키 디바이스로 받으세요.">
+<meta name="theme-color" content="#0f766e">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/variable/pretendardvariable.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#ffffff;--bg2:#f3f8f6;--line:#e3e9e6;--ink:#1a2420;--dim:#556059;--muted:#93a09a;
+  --pri:#0f766e;--pri-d:#0b5a53;--priw:#e4f4f1;--accent:#f59e0b;
+  --shadow:0 1px 3px rgba(15,60,50,.06),0 1px 2px rgba(15,60,50,.04);--shadow-h:0 8px 24px rgba(15,60,50,.12)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Pretendard Variable',Pretendard,-apple-system,'Noto Sans KR',sans-serif;line-height:1.65;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;font-weight:800;color:var(--pri);letter-spacing:.03em}
+.draft{background:#fff8e1;color:#8a6d00;font-size:11px;font-weight:700;text-align:center;padding:5px;border-bottom:1px solid #f0e4b8}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:16px;height:58px}
+nav .brand{font-weight:800;font-size:17px}nav .brand b{color:var(--pri)}
+nav .lk{display:flex;gap:18px;margin-left:auto;font-size:14.5px;font-weight:600}nav .lk a{color:var(--dim)}nav .lk a:hover{color:var(--pri)}
+nav .cta{background:var(--pri);color:#fff;font-weight:700;padding:9px 16px;border-radius:8px;font-size:13.5px}nav .cta:hover{background:var(--pri-d)}
+@media(max-width:760px){nav .lk{display:none}}
+.hero{padding:56px 0 44px;text-align:center}
+.hero .eyebrow{display:block;margin-bottom:14px}
+.hero h1{font-size:clamp(27px,6.5vw,46px);font-weight:800;letter-spacing:-.035em;line-height:1.2;margin-bottom:18px}
+.hero h1 .g{color:var(--pri)}
+.hero .lead{font-size:clamp(15px,2.3vw,18px);color:var(--dim);max-width:650px;margin:0 auto;line-height:1.7}
+.hero .btns{display:flex;gap:10px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:700;font-size:15px;transition:.2s}
+.btn.p{background:var(--pri);color:#fff;box-shadow:var(--shadow)}.btn.p:hover{background:var(--pri-d);box-shadow:var(--shadow-h)}
+.btn.s{border:1px solid var(--line);color:var(--ink);background:#fff}.btn.s:hover{border-color:var(--pri);color:var(--pri)}
+.hero .note{margin-top:18px;font-size:12.5px;color:var(--muted)}
+.device{max-width:360px;margin:34px auto 0;border:10px solid #1a2420;border-radius:30px;background:linear-gradient(160deg,#0f766e,#0b5a53);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:var(--shadow-h);position:relative}
+.device .scr{text-align:center;padding:20px}.device .scr .big{font-size:22px;font-weight:800}.device .scr .sm{font-size:12px;opacity:.85;margin-top:6px;font-family:monospace}
+.device .dot{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.4)}
+.stats{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:26px 20px}
+.stat{text-align:center}.stat .n{font-weight:800;font-size:clamp(17px,4vw,24px);color:var(--pri)}.stat .l{font-size:12px;color:var(--dim);margin-top:4px}
+@media(max-width:640px){.stats .wrap{grid-template-columns:repeat(2,1fr);gap:16px 8px}.stat:last-child{grid-column:1/-1}}
+.sec{padding:56px 0}.sec.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec h2{font-size:clamp(21px,4.5vw,30px);font-weight:800;letter-spacing:-.03em;margin-bottom:10px;text-align:center}
+.sec h2 .g{color:var(--pri)}
+.sec .sub{color:var(--dim);max-width:600px;margin:0 auto 36px;text-align:center;font-size:15px}
+.grid{display:grid;gap:16px}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+@media(max-width:900px){.g4,.g5{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}}
+@media(max-width:560px){.g4,.g5{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow);transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.card .ic{font-size:26px;margin-bottom:10px}
+.card .step{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;background:var(--priw);color:var(--pri);font-weight:800;margin-bottom:12px}
+.card h3{font-size:16.5px;font-weight:800;letter-spacing:-.02em}.card p{color:var(--dim);font-size:13.5px;margin-top:8px;line-height:1.6}
+.kit .card{text-align:center}
+.final{background:var(--pri);color:#fff;border-radius:18px;padding:46px 28px;text-align:center;margin:36px 0}
+.final h2{color:#fff;font-size:clamp(22px,5vw,34px);font-weight:800}.final p{color:#d4ece8;margin:12px auto 24px;max-width:480px;font-size:15px}
+.final .btn.p{background:#fff;color:var(--pri)}.final .btn.p:hover{background:#eefcf9}
+.tagrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.tagrow span{background:var(--priw);color:var(--pri);font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px}
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:36px 0 48px;font-size:13px;color:var(--muted)}
+footer .brand{font-weight:800;color:var(--ink);margin-bottom:8px}footer .brand b{color:var(--pri)}
+.reveal{opacity:0;transform:translateY(16px);transition:.5s}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="draft">SCAFFOLD · 구조 스캐폴드 (내부검토)</div>
+
+<nav><div class="wrap">
+  <a class="brand" href="index.html">carus<b>works</b> SMOS</a>
+  <div class="lk"><a href="#kit">솔루션 키트</a><a href="#how">작동 방식</a><a href="#why">왜 턴키</a><a href="#biz">업종</a></div>
+  <a href="#contact" class="cta">도입 상담</a>
+</div></nav>
+
+<!-- HERO -->
+<section class="hero"><div class="wrap">
+  <span class="eyebrow">carusworks · Small Business OS</span>
+  <h1>소상공인을 위한, <span class="g">켜면 되는 회사</span><br>태블릿 하나에 통째로.</h1>
+  <p class="lead">홍보·마케팅·운영을 전부 담은 <b>1인 미디어 솔루션 키트</b>를, 설치·설정 다 끝낸 <b>턴키 디바이스</b>로 드립니다. 복잡한 거 없이 — 받아서 켜면 끝.</p>
+  <div class="btns">
+    <a href="#contact" class="btn p">도입 상담하기</a>
+    <a href="#kit" class="btn s">구성 보기</a>
+  </div>
+  <div class="note">디바이스까지 포함 · 온디바이스 AI · 구독 종속 없음(소유) · 저유지비</div>
+  <div class="device"><div class="scr"><div class="big">우리 가게 AI 켜짐</div><div class="sm">말하면 됩니다 · 설정 끝</div></div><div class="dot"></div></div>
+</div></section>
+
+<!-- STATS -->
+<section class="stats"><div class="wrap">
+  <div class="stat"><div class="n">턴키</div><div class="l">설치·설정 0</div></div>
+  <div class="stat"><div class="n">온디바이스</div><div class="l">내 기기에서 작동</div></div>
+  <div class="stat"><div class="n">5+</div><div class="l">1인 미디어 모듈</div></div>
+  <div class="stat"><div class="n">소유</div><div class="l">구독 아님</div></div>
+  <div class="stat"><div class="n">저유지비</div><div class="l">공개 플랫폼 활용</div></div>
+</div></section>
+
+<!-- KIT -->
+<section class="sec reveal" id="kit"><div class="wrap">
+  <span class="eyebrow" style="display:block;text-align:center">1인 미디어 솔루션 키트</span>
+  <h2>가게 운영에 필요한 걸 <span class="g">한 세트</span>로</h2>
+  <p class="sub">직원 한 명 몫을 AI가. 다섯 가지 모듈이 미리 설치되어 바로 돌아갑니다.</p>
+  <div class="grid g5 kit">
+    <div class="card"><div class="ic">🎬</div><h3>홍보 영상</h3><p>가게 소개·숏폼 자동 제작.</p></div>
+    <div class="card"><div class="ic">📣</div><h3>SNS·마케팅</h3><p>콘텐츠 작성·자동 발행.</p></div>
+    <div class="card"><div class="ic">🎨</div><h3>디자인·메뉴판</h3><p>썸네일·이미지·메뉴판 생성.</p></div>
+    <div class="card"><div class="ic">💬</div><h3>고객 응대</h3><p>주문·문의 자동 응대.</p></div>
+    <div class="card"><div class="ic">📊</div><h3>장부·매출</h3><p>매출 정리·요약 리포트.</p></div>
+  </div>
+</div></section>
+
+<!-- HOW -->
+<section class="sec alt reveal" id="how"><div class="wrap">
+  <span class="eyebrow" style="display:block;text-align:center">작동 방식</span>
+  <h2>받아서 <span class="g">켜면</span> 끝</h2>
+  <p class="sub">컴퓨터도, 설정도, 구독도 없습니다. 디바이스 하나면 됩니다.</p>
+  <div class="grid g4">
+    <div class="card"><div class="step">1</div><h3>디바이스 수령</h3><p>태블릿(또는 폰)에 모든 게 설치되어 도착.</p></div>
+    <div class="card"><div class="step">2</div><h3>켜기</h3><p>온디바이스 AI·계정·연동 전부 세팅 완료.</p></div>
+    <div class="card"><div class="step">3</div><h3>말로 지시</h3><p>복잡한 화면 없이 — 말하면 AI가 실행.</p></div>
+    <div class="card"><div class="step">4</div><h3>내 것</h3><p>구독 종속 없이 당신이 소유·운영.</p></div>
+  </div>
+</div></section>
+
+<!-- WHY -->
+<section class="sec reveal" id="why"><div class="wrap">
+  <span class="eyebrow" style="display:block;text-align:center">왜 턴키</span>
+  <h2>소상공인은 <span class="g">세팅할 시간이 없으니까</span></h2>
+  <div class="grid g4">
+    <div class="card"><div class="ic">📦</div><h3>턴키</h3><p>설치·설정·연동 다 끝내서 던집니다. 기술 몰라도 OK.</p></div>
+    <div class="card"><div class="ic">🔒</div><h3>온디바이스</h3><p>데이터는 내 기기에. 민감정보 밖으로 안 나감.</p></div>
+    <div class="card"><div class="ic">🏠</div><h3>소유 이양</h3><p>월 구독에 묶이지 않습니다. 사서 쓰는 내 자산.</p></div>
+    <div class="card"><div class="ic">💸</div><h3>저유지비</h3><p>공개 플랫폼 활용으로 운영비 최소화.</p></div>
+  </div>
+</div></section>
+
+<!-- BIZ -->
+<section class="sec alt reveal" id="biz"><div class="wrap">
+  <span class="eyebrow" style="display:block;text-align:center">이런 가게에</span>
+  <h2>동네 어디든</h2>
+  <div class="tagrow">
+    <span>🥖 빵집</span><span>🍜 식당</span><span>☕ 카페</span><span>💇 미용실</span><span>🛒 소매점</span><span>🧰 공방</span><span>🏋️ 헬스장</span><span>🐾 동물병원</span>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="sec reveal" id="contact"><div class="wrap">
+  <div class="final">
+    <h2>가게에 AI 직원, 하나 들이세요</h2>
+    <p>설치도 공부도 필요 없습니다. 디바이스 받아서 켜면, 오늘부터 일합니다.</p>
+    <a href="#" class="btn p">도입 상담하기</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="brand">carus<b>works</b> SMOS · Small Business OS</div>
+  <div>소상공인 턴키 1인 미디어 키트 — 디바이스까지 포함해 통째로 드립니다.</div>
+  <div style="margin-top:8px;color:var(--muted)">※ 내부 검토용 구조 스캐폴드 · 2026 · carusworks</div>
+</div></footer>
+
+<script>(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("in")})},{threshold:.08});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)})})();</script>
+</body>
+</html>
