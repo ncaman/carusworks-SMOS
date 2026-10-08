@@ -3,166 +3,253 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>carusworks SMOS — 소상공인 턴키 비즈니스 OS</title>
-<meta name="description" content="소상공인을 위한 1인 미디어 솔루션 키트. 태블릿 하나에 통째로 — 설치·설정 다 끝낸 턴키 디바이스로 받으세요.">
-<meta name="theme-color" content="#0f766e">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/variable/pretendardvariable.min.css">
+<title>카루스웍스 SMOS — 턴키 디바이스</title>
+<meta name="description" content="카루스웍스 SMOS. 태블릿 한 대에 다섯 모듈. 홍보 영상, SNS, 디자인·메뉴판, 고객 응대, 장부·매출. 월 팀 구독은 없습니다.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://ncaman.github.io/carusworks-SMOS/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="카루스웍스 SMOS — 턴키 디바이스">
+<meta property="og:description" content="디바이스를 소유합니다. 지주회사 카루스웍스와 카루스웍스 AS로 이어집니다.">
+<meta property="og:url" content="https://ncaman.github.io/carusworks-SMOS/">
+<meta property="og:image" content="https://ncaman.github.io/carusworks-SMOS/assets/hero.jpg">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#ffffff;--bg2:#f3f8f6;--line:#e3e9e6;--ink:#1a2420;--dim:#556059;--muted:#93a09a;
-  --pri:#0f766e;--pri-d:#0b5a53;--priw:#e4f4f1;--accent:#f59e0b;
-  --shadow:0 1px 3px rgba(15,60,50,.06),0 1px 2px rgba(15,60,50,.04);--shadow-h:0 8px 24px rgba(15,60,50,.12)}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font-family:'Pretendard Variable',Pretendard,-apple-system,'Noto Sans KR',sans-serif;line-height:1.65;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+  --bg:#fff;--bg2:#f6f7f9;--ink:#191f28;--dim:#4e5968;--muted:#8b95a1;--line:#e6e8ec;
+  --gold:#0f766e;--head:66px;--max:1146px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Pretendard Variable",Pretendard,"Noto Sans KR",sans-serif;line-height:1.7;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.eyebrow{font-size:12px;font-weight:800;color:var(--pri);letter-spacing:.03em}
-.draft{background:#fff8e1;color:#8a6d00;font-size:11px;font-weight:700;text-align:center;padding:5px;border-bottom:1px solid #f0e4b8}
-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:16px;height:58px}
-nav .brand{font-weight:800;font-size:17px}nav .brand b{color:var(--pri)}
-nav .hold{font-size:12px;font-weight:800;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:4px 10px}nav .hold:hover{color:var(--pri);border-color:var(--pri)}
-nav .lk{display:flex;gap:18px;margin-left:auto;font-size:14.5px;font-weight:600}nav .lk a{color:var(--dim)}nav .lk a:hover{color:var(--pri)}
-nav .cta{background:var(--pri);color:#fff;font-weight:700;padding:9px 16px;border-radius:8px;font-size:13.5px}nav .cta:hover{background:var(--pri-d)}
-@media(max-width:760px){nav .lk{display:none}}
-.hero{padding:56px 0 44px;text-align:center}
-.hero .eyebrow{display:block;margin-bottom:14px}
-.hero h1{font-size:clamp(27px,6.5vw,46px);font-weight:800;letter-spacing:-.035em;line-height:1.2;margin-bottom:18px}
-.hero h1 .g{color:var(--pri)}
-.hero .lead{font-size:clamp(15px,2.3vw,18px);color:var(--dim);max-width:650px;margin:0 auto;line-height:1.7}
-.hero .btns{display:flex;gap:10px;justify-content:center;margin-top:28px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:700;font-size:15px;transition:.2s}
-.btn.p{background:var(--pri);color:#fff;box-shadow:var(--shadow)}.btn.p:hover{background:var(--pri-d);box-shadow:var(--shadow-h)}
-.btn.s{border:1px solid var(--line);color:var(--ink);background:#fff}.btn.s:hover{border-color:var(--pri);color:var(--pri)}
-.hero .note{margin-top:18px;font-size:12.5px;color:var(--muted)}
-.device{max-width:360px;margin:34px auto 0;border:10px solid #1a2420;border-radius:30px;background:linear-gradient(160deg,#0f766e,#0b5a53);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:var(--shadow-h);position:relative}
-.device .scr{text-align:center;padding:20px}.device .scr .big{font-size:22px;font-weight:800}.device .scr .sm{font-size:12px;opacity:.85;margin-top:6px;font-family:monospace}
-.device .dot{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.4)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img,video{max-width:100%;display:block}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:40;height:var(--head);display:flex;align-items:center;background:rgba(255,255,255,.92);border-bottom:1px solid transparent}
+.topbar.solid,.topbar:has(#sitenav.open){background:#fff;border-bottom-color:var(--line)}
+.inner{width:min(var(--max),calc(100% - 32px));margin:0 auto;display:flex;align-items:center;gap:18px}
+.logo{font-family:"JetBrains Mono",monospace;font-weight:700;letter-spacing:.14em;color:var(--gold);font-size:13px}
+.logo small{margin-left:8px;color:var(--dim);letter-spacing:.16em;font-size:10px}
+#sitenav{margin-left:auto;display:flex;align-items:center;gap:16px;font-size:14px;font-weight:650}
+#sitenav a{color:var(--dim)}
+#sitenav a.here,#sitenav a:hover{color:var(--ink)}
+.pill{background:#191f28;color:#fff !important;border-radius:999px;padding:8px 16px;font-weight:750}
+.burger{display:none;margin-left:auto;width:42px;height:42px;border-radius:999px;border:1px solid var(--line);align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger span{display:block;width:16px;height:1.5px;background:#191f28}
+.hero{padding:calc(var(--head) + 48px) 0 28px}
+.hero-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;letter-spacing:0;color:var(--gold)}
+h1{font-size:clamp(32px,4.6vw,58px);line-height:1.12;font-weight:800;letter-spacing:-.04em;margin:12px 0 16px}
+.grad{font-family:"Playfair Display",serif;font-style:italic;font-weight:500}
+.lead{color:var(--dim);font-size:clamp(15.5px,1.4vw,18px);max-width:38rem}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;border-radius:999px;padding:12px 18px;font-weight:750}
+.btn.p{background:#191f28;color:#fff}
+.btn.s{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.note{margin-top:16px;color:var(--muted);font-size:13px}
+.hero-still{border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#f4f5f7}
+.hero-still video,.hero-still img{width:100%;aspect-ratio:16/10;object-fit:cover}
 .stats{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:26px 20px}
-.stat{text-align:center}.stat .n{font-weight:800;font-size:clamp(17px,4vw,24px);color:var(--pri)}.stat .l{font-size:12px;color:var(--dim);margin-top:4px}
-@media(max-width:640px){.stats .wrap{grid-template-columns:repeat(2,1fr);gap:16px 8px}.stat:last-child{grid-column:1/-1}}
-.sec{padding:56px 0}.sec.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.sec h2{font-size:clamp(21px,4.5vw,30px);font-weight:800;letter-spacing:-.03em;margin-bottom:10px;text-align:center}
-.sec h2 .g{color:var(--pri)}
-.sec .sub{color:var(--dim);max-width:600px;margin:0 auto 36px;text-align:center;font-size:15px}
-.grid{display:grid;gap:16px}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
-@media(max-width:900px){.g4,.g5{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}}
-@media(max-width:560px){.g4,.g5{grid-template-columns:1fr}}
-.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow);transition:.2s}
-.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
-.card .ic{font-size:26px;margin-bottom:10px}
-.card .step{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;background:var(--priw);color:var(--pri);font-weight:800;margin-bottom:12px}
-.card h3{font-size:16.5px;font-weight:800;letter-spacing:-.02em}.card p{color:var(--dim);font-size:13.5px;margin-top:8px;line-height:1.6}
-.kit .card{text-align:center}
-.final{background:var(--pri);color:#fff;border-radius:18px;padding:46px 28px;text-align:center;margin:36px 0}
-.final h2{color:#fff;font-size:clamp(22px,5vw,34px);font-weight:800}.final p{color:#d4ece8;margin:12px auto 24px;max-width:480px;font-size:15px}
-.final .btn.p{background:#fff;color:var(--pri)}.final .btn.p:hover{background:#eefcf9}
-.tagrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-.tagrow span{background:var(--priw);color:var(--pri);font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px}
-footer{border-top:1px solid var(--line);background:var(--bg2);padding:36px 0 48px;font-size:13px;color:var(--muted)}
-footer .brand{font-weight:800;color:var(--ink);margin-bottom:8px}footer .brand b{color:var(--pri)}
-.reveal{opacity:0;transform:translateY(16px);transition:.5s}.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+.stats .grid{display:grid;grid-template-columns:repeat(4,1fr);padding:28px 0;text-align:center}
+.stat .n{font-weight:800;font-size:clamp(22px,3vw,32px);letter-spacing:-.03em}
+.stat .l{color:var(--dim);font-size:13px;margin-top:4px}
+.sec{padding:84px 0}
+.sec h2{font-size:clamp(28px,3.4vw,42px);font-weight:800;letter-spacing:-.035em;margin:10px 0 12px}
+.sub{color:var(--dim);max-width:40rem;margin-bottom:28px}
+.g5,.g4,.g3,.doors{display:grid;gap:14px}
+.g5{grid-template-columns:repeat(5,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3,.doors{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;min-height:100%}
+.card .k{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--gold)}
+.card h3{font-size:18px;margin:8px 0}
+.card p{color:var(--dim);font-size:14.5px}
+.card .more{display:inline-flex;margin-top:12px;font-weight:750;border-bottom:1px solid rgba(25,31,40,.28);padding-bottom:2px}
+.band{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags span{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:700;color:var(--dim);background:#fff}
+.door.here{background:var(--bg2)}
+.shot{margin-top:22px;border-radius:28px;overflow:hidden;border:1px solid var(--line)}
+.shot img{width:100%;aspect-ratio:16/7;object-fit:cover}
+footer{padding:36px 0 48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:end}
+.foot a{margin-right:14px}
+.brand{font-family:"JetBrains Mono",monospace;color:var(--gold);letter-spacing:.14em;font-weight:700}
+@media(max-width:1023px){
+  .burger{display:flex}
+  #sitenav{display:none;position:absolute;top:var(--head);left:0;right:0;margin:0;flex-direction:column;align-items:stretch;gap:4px;background:#fff;border-bottom:1px solid var(--line);padding:12px 16px 18px;box-shadow:0 28px 48px rgba(25,31,40,.06)}
+  #sitenav.open{display:flex;min-height:calc(100dvh - var(--head));overflow:auto}
+  #sitenav a{padding:12px 8px;font-size:16px}
+  .pill{text-align:center}
+}
+@media(max-width:860px){
+  .hero-layout,.g5,.g4,.g3,.doors,.stats .grid{grid-template-columns:1fr}
+  .g5,.g4{grid-template-columns:1fr 1fr}
+  .sec{padding:64px 0}
+}
+@media(max-width:420px){
+  h1{font-size:28px;letter-spacing:-.045em}
+  .g5{grid-template-columns:1fr}
+  .stats .grid{grid-template-columns:1fr 1fr}
+}
+
 </style>
 </head>
 <body>
-<div class="draft">SCAFFOLD · 구조 스캐폴드 (내부검토)</div>
-
-<nav><div class="wrap">
-  <a class="brand" href="index.html">carus<b>works</b> SMOS</a>
-  <a class="hold" href="https://carusworks.com/">지주</a>
-  <div class="lk"><a href="#kit">솔루션 키트</a><a href="#how">작동 방식</a><a href="#why">왜 턴키</a><a href="#biz">업종</a></div>
-  <a href="#contact" class="cta">도입 상담</a>
-</div></nav>
-
-<!-- HERO -->
-<section class="hero"><div class="wrap">
-  <span class="eyebrow">carusworks · Small Business OS</span>
-  <h1>소상공인을 위한, <span class="g">켜면 되는 회사</span><br>태블릿 하나에 통째로.</h1>
-  <p class="lead">홍보·마케팅·운영을 전부 담은 <b>1인 미디어 솔루션 키트</b>를, 설치·설정 다 끝낸 <b>턴키 디바이스</b>로 드립니다. 복잡한 거 없이 — 받아서 켜면 끝.</p>
-  <div class="btns">
-    <a href="#contact" class="btn p">도입 상담하기</a>
-    <a href="#kit" class="btn s">구성 보기</a>
+<header class="topbar" id="topbar">
+  <div class="inner">
+    <a class="logo" href="https://carusworks.com/">carusworks <small>SMOS</small></a>
+    <nav id="sitenav">
+      <a href="https://carusworks.com/">지주</a>
+      <a href="https://ncaman.github.io/carusworks-AS/">AS</a>
+      <a class="here" href="index.html">SMOS</a>
+      <a href="#kit">키트</a>
+      <a href="#how">작동</a>
+      <a href="#why">소유</a>
+      <a class="pill" href="#contact">도입 문의</a>
+    </nav>
+    <button class="burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="sitenav"><span></span><span></span><span></span></button>
   </div>
-  <div class="note">디바이스까지 포함 · 온디바이스 AI · 구독 종속 없음(소유) · 저유지비</div>
-  <div class="device"><div class="scr"><div class="big">우리 가게 AI 켜짐</div><div class="sm">말하면 됩니다 · 설정 끝</div></div><div class="dot"></div></div>
-</div></section>
+</header>
 
-<!-- STATS -->
-<section class="stats"><div class="wrap">
-  <div class="stat"><div class="n">턴키</div><div class="l">설치·설정 0</div></div>
-  <div class="stat"><div class="n">온디바이스</div><div class="l">내 기기에서 작동</div></div>
-  <div class="stat"><div class="n">5+</div><div class="l">1인 미디어 모듈</div></div>
-  <div class="stat"><div class="n">소유</div><div class="l">구독 아님</div></div>
-  <div class="stat"><div class="n">저유지비</div><div class="l">공개 플랫폼 활용</div></div>
-</div></section>
-
-<!-- KIT -->
-<section class="sec reveal" id="kit"><div class="wrap">
-  <span class="eyebrow" style="display:block;text-align:center">1인 미디어 솔루션 키트</span>
-  <h2>가게 운영에 필요한 걸 <span class="g">한 세트</span>로</h2>
-  <p class="sub">직원 한 명 몫을 AI가. 다섯 가지 모듈이 미리 설치되어 바로 돌아갑니다.</p>
-  <div class="grid g5 kit">
-    <div class="card"><div class="ic">🎬</div><h3>홍보 영상</h3><p>가게 소개·숏폼 자동 제작.</p></div>
-    <div class="card"><div class="ic">📣</div><h3>SNS·마케팅</h3><p>콘텐츠 작성·자동 발행.</p></div>
-    <div class="card"><div class="ic">🎨</div><h3>디자인·메뉴판</h3><p>썸네일·이미지·메뉴판 생성.</p></div>
-    <div class="card"><div class="ic">💬</div><h3>고객 응대</h3><p>주문·문의 자동 응대.</p></div>
-    <div class="card"><div class="ic">📊</div><h3>장부·매출</h3><p>매출 정리·요약 리포트.</p></div>
+<section class="hero">
+  <div class="wrap hero-layout">
+    <div>
+      <span class="eyebrow">카루스웍스 SMOS</span>
+      <h1>태블릿 한 대,<br><em class="grad">켜면 되는 가게.</em></h1>
+      <p class="lead">홍보 영상, SNS, 디자인·메뉴판, 고객 응대, 장부·매출. 다섯 모듈이 설치된 디바이스를 고객이 소유합니다. 월 팀 구독은 없습니다.</p>
+      <div class="btns">
+        <a class="btn p" href="#contact">도입 문의</a>
+        <a class="btn s" href="#kit">다섯 모듈</a>
+      </div>
+      <p class="note">디바이스 1 · 모듈 5 · 런타임 0원 · 말로 지시</p>
+    </div>
+    <figure class="hero-still">
+      <video autoplay muted loop playsinline poster="assets/hero.jpg">
+        <source src="assets/hero-loop.mp4" type="video/mp4">
+      </video>
+    </figure>
   </div>
-</div></section>
+</section>
 
-<!-- HOW -->
-<section class="sec alt reveal" id="how"><div class="wrap">
-  <span class="eyebrow" style="display:block;text-align:center">작동 방식</span>
-  <h2>받아서 <span class="g">켜면</span> 끝</h2>
-  <p class="sub">컴퓨터도, 설정도, 구독도 없습니다. 디바이스 하나면 됩니다.</p>
-  <div class="grid g4">
-    <div class="card"><div class="step">1</div><h3>디바이스 수령</h3><p>태블릿(또는 폰)에 모든 게 설치되어 도착.</p></div>
-    <div class="card"><div class="step">2</div><h3>켜기</h3><p>온디바이스 AI·계정·연동 전부 세팅 완료.</p></div>
-    <div class="card"><div class="step">3</div><h3>말로 지시</h3><p>복잡한 화면 없이 — 말하면 AI가 실행.</p></div>
-    <div class="card"><div class="step">4</div><h3>내 것</h3><p>구독 종속 없이 당신이 소유·운영.</p></div>
+<section class="stats">
+  <div class="wrap grid">
+    <div class="stat"><div class="n">1</div><div class="l">턴키 디바이스</div></div>
+    <div class="stat"><div class="n">5</div><div class="l">설치 모듈</div></div>
+    <div class="stat"><div class="n">0원</div><div class="l">공개 자리 런타임</div></div>
+    <div class="stat"><div class="n">소유</div><div class="l">월 구독 아님</div></div>
   </div>
-</div></section>
+</section>
 
-<!-- WHY -->
-<section class="sec reveal" id="why"><div class="wrap">
-  <span class="eyebrow" style="display:block;text-align:center">왜 턴키</span>
-  <h2>소상공인은 <span class="g">세팅할 시간이 없으니까</span></h2>
-  <div class="grid g4">
-    <div class="card"><div class="ic">📦</div><h3>턴키</h3><p>설치·설정·연동 다 끝내서 던집니다. 기술 몰라도 OK.</p></div>
-    <div class="card"><div class="ic">🔒</div><h3>온디바이스</h3><p>데이터는 내 기기에. 민감정보 밖으로 안 나감.</p></div>
-    <div class="card"><div class="ic">🏠</div><h3>소유 이양</h3><p>월 구독에 묶이지 않습니다. 사서 쓰는 내 자산.</p></div>
-    <div class="card"><div class="ic">💸</div><h3>저유지비</h3><p>공개 플랫폼 활용으로 운영비 최소화.</p></div>
+<section class="sec" id="kit">
+  <div class="wrap">
+    <span class="eyebrow">Kit</span>
+    <h2>다섯이 한 대에 있습니다.</h2>
+    <p class="sub">가게 운영의 빈자리를 팀 구독으로 채우지 않습니다. 디바이스 안의 모듈입니다.</p>
+    <div class="g5">
+      <article class="card"><div class="k">01</div><h3>홍보 영상</h3><p>가게 소개와 짧은 영상.</p></article>
+      <article class="card"><div class="k">02</div><h3>SNS</h3><p>콘텐츠를 쓰고 발행합니다.</p></article>
+      <article class="card"><div class="k">03</div><h3>디자인·메뉴판</h3><p>이미지와 메뉴판.</p></article>
+      <article class="card"><div class="k">04</div><h3>고객 응대</h3><p>주문과 문의.</p></article>
+      <article class="card"><div class="k">05</div><h3>장부·매출</h3><p>매출을 모아 요약합니다.</p></article>
+    </div>
   </div>
-</div></section>
+</section>
 
-<!-- BIZ -->
-<section class="sec alt reveal" id="biz"><div class="wrap">
-  <span class="eyebrow" style="display:block;text-align:center">이런 가게에</span>
-  <h2>동네 어디든</h2>
-  <div class="tagrow">
-    <span>🥖 빵집</span><span>🍜 식당</span><span>☕ 카페</span><span>💇 미용실</span><span>🛒 소매점</span><span>🧰 공방</span><span>🏋️ 헬스장</span><span>🐾 동물병원</span>
+<section class="sec band" id="how">
+  <div class="wrap">
+    <span class="eyebrow">How</span>
+    <h2>받아서 켭니다.</h2>
+    <p class="sub">따로 맞출 설정 화면을 조건으로 두지 않습니다. 말이 입력입니다.</p>
+    <div class="g4">
+      <article class="card"><div class="k">01</div><h3>수령</h3><p>태블릿에 다섯 모듈이 설치된 채로 도착합니다.</p></article>
+      <article class="card"><div class="k">02</div><h3>켜기</h3><p>계정과 연동은 넘어오기 전에 끝나 있습니다.</p></article>
+      <article class="card"><div class="k">03</div><h3>말로 지시</h3><p>화면 시안이 시작 조건이 아닙니다.</p></article>
+      <article class="card"><div class="k">04</div><h3>소유</h3><p>디바이스는 고객 것입니다. 월 팀 구독으로 되잡지 않습니다.</p></article>
+    </div>
+    <figure class="shot"><img src="assets/table.jpg" alt="빈 하얀 탁자"></figure>
   </div>
-</div></section>
+</section>
 
-<!-- CTA -->
-<section class="sec reveal" id="contact"><div class="wrap">
-  <div class="final">
-    <h2>가게에 AI 직원, 하나 들이세요</h2>
-    <p>설치도 공부도 필요 없습니다. 디바이스 받아서 켜면, 오늘부터 일합니다.</p>
-    <a href="#" class="btn p">도입 상담하기</a>
+<section class="sec" id="why">
+  <div class="wrap">
+    <span class="eyebrow">Ownership</span>
+    <h2>세팅할 시간을 팔지 않습니다.</h2>
+    <div class="g4">
+      <article class="card"><div class="k">턴키</div><h3>끝난 채로</h3><p>설치와 연동을 끝내고 넘깁니다.</p></article>
+      <article class="card"><div class="k">디바이스</div><h3>한 대</h3><p>태블릿이 일의 자리입니다. 고객이 갖습니다.</p></article>
+      <article class="card"><div class="k">구독</div><h3>없습니다</h3><p>빈 인력 자리를 다음 달에도 청구하지 않습니다.</p></article>
+      <article class="card"><div class="k">런타임</div><h3>0원</h3><p>공개된 페이지, 텔레그램, 유튜브, 디스코드가 실행 자리입니다. 비용은 초기 이양과 스태프 쿠폰입니다.</p></article>
+    </div>
   </div>
-</div></section>
+</section>
 
-<footer><div class="wrap">
-  <div class="brand">carus<b>works</b> SMOS · Small Business OS</div>
-  <div>소상공인 턴키 1인 미디어 키트 — 디바이스까지 포함해 통째로 드립니다.</div>
-  <div style="margin-top:8px"><a href="https://carusworks.com/" style="color:var(--pri);font-weight:700">carusworks 지주회사</a></div>
-  <div style="margin-top:8px;color:var(--muted)">※ 내부 검토용 구조 스캐폴드 · 2026 · carusworks</div>
-</div></footer>
+<section class="sec band" id="trades">
+  <div class="wrap">
+    <span class="eyebrow">Templates</span>
+    <h2>업종 틀은 다섯입니다.</h2>
+    <p class="sub">가게 이름을 사례로 올리지 않습니다. 틀은 본사가 복제하고, 디바이스는 여기서 넘깁니다.</p>
+    <div class="tags">
+      <span>빵집</span><span>요식</span><span>부동산</span><span>폰리테일</span><span>스튜디오</span>
+    </div>
+  </div>
+</section>
 
-<script>(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("in")})},{threshold:.08});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)})})();</script>
+<section class="sec" id="doors">
+  <div class="wrap">
+    <span class="eyebrow">Passage</span>
+    <h2>세 문은 한 집입니다.</h2>
+    <p class="sub">여기는 카루스웍스 SMOS입니다. 스태프 쿠폰은 AS에 있습니다.</p>
+    <div class="doors">
+      <a class="card" href="https://carusworks.com/"><div class="k">지주</div><h3>카루스웍스</h3><p>본사. 사례 진열은 대기이고, 브랜치는 여기로 돌아옵니다.</p><span class="more">본사로</span></a>
+      <a class="card" href="https://ncaman.github.io/carusworks-AS/"><div class="k">브랜치</div><h3>카루스웍스 AS</h3><p>스태프 하나, 쿠폰 한 장. 공공 23, 콘텐츠 5.</p><span class="more">스태프로</span></a>
+      <article class="card door here"><div class="k">지금</div><h3>카루스웍스 SMOS</h3><p>태블릿 한 대. 다섯 모듈.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec band" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>디바이스 범위는 메일로.</h2>
+    <p class="sub">서버에 따로 저장하지 않습니다. 주소는 contact@carusworks.com 입니다.</p>
+    <a class="btn p" href="mailto:contact@carusworks.com?subject=%EC%B9%B4%EB%A3%A8%EC%8A%A4%EC%9B%8D%EC%8A%A4%20SMOS%20%EB%8F%84%EC%9E%85%20%EB%AC%B8%EC%9D%98">도입 문의</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand">carusworks SMOS</div>
+      <p>카루스웍스의 디바이스 브랜치. 소유는 고객, 런타임은 공개된 자리.</p>
+    </div>
+    <div>
+      <a href="https://carusworks.com/">지주</a>
+      <a href="https://ncaman.github.io/carusworks-AS/">AS</a>
+      <a href="mailto:contact@carusworks.com">contact@carusworks.com</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var bar=document.getElementById("topbar");
+  var onScroll=function(){bar.classList.toggle("solid",window.scrollY>8);};
+  onScroll();
+  window.addEventListener("scroll",onScroll,{passive:true});
+  var burger=document.querySelector(".burger");
+  var nav=document.getElementById("sitenav");
+  function closeNav(){nav.classList.remove("open");burger.setAttribute("aria-expanded","false");burger.setAttribute("aria-label","메뉴 열기");}
+  burger.addEventListener("click",function(){
+    var open=nav.classList.toggle("open");
+    burger.setAttribute("aria-expanded",open?"true":"false");
+    burger.setAttribute("aria-label",open?"메뉴 닫기":"메뉴 열기");
+  });
+  nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",closeNav);});
+  var vid=document.querySelector(".hero video");
+  if(vid && window.matchMedia("(prefers-reduced-motion: reduce)").matches){vid.removeAttribute("autoplay");vid.pause();}
+})();
+</script>
 </body>
 </html>
